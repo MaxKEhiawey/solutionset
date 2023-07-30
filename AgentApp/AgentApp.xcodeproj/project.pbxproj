@@ -17,6 +17,7 @@
 		EB9F3A8F2A69D8EC00125F2E /* ShuffleTheArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9F3A8E2A69D8EC00125F2E /* ShuffleTheArray.swift */; };
 		EBD42B8F2A5D6C46000E57C9 /* AgentAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD42B8E2A5D6C46000E57C9 /* AgentAppTests.swift */; };
 		EBD42B962A5D7020000E57C9 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD42B952A5D7020000E57C9 /* Calculator.swift */; };
+		EBF746452A76FA2A006BA6F3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF746442A76FA2A006BA6F3 /* LoginView.swift */; };
 		EBFBF74A2A6B32F000099DEA /* ShuffleArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFBF7492A6B32F000099DEA /* ShuffleArrayTests.swift */; };
 		EBFBF74C2A6B343100099DEA /* ContainsDuplicateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFBF74B2A6B343100099DEA /* ContainsDuplicateTests.swift */; };
 		EBFBF74E2A6B361400099DEA /* ValidParenthesesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFBF74D2A6B361400099DEA /* ValidParenthesesTests.swift */; };
@@ -48,6 +49,7 @@
 		EBD42B8C2A5D6C46000E57C9 /* AgentAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgentAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBD42B8E2A5D6C46000E57C9 /* AgentAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentAppTests.swift; sourceTree = "<group>"; };
 		EBD42B952A5D7020000E57C9 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		EBF746442A76FA2A006BA6F3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		EBFBF7492A6B32F000099DEA /* ShuffleArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuffleArrayTests.swift; sourceTree = "<group>"; };
 		EBFBF74B2A6B343100099DEA /* ContainsDuplicateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainsDuplicateTests.swift; sourceTree = "<group>"; };
 		EBFBF74D2A6B361400099DEA /* ValidParenthesesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidParenthesesTests.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		EB8DE77B2A53181C009FB842 = {
 			isa = PBXGroup;
 			children = (
+				EBF746432A76F108006BA6F3 /* AuthUI */,
 				EB9F3A852A68858100125F2E /* Algorithms */,
 				EB8DE7862A53181C009FB842 /* AgentApp */,
 				EBD42B8D2A5D6C46000E57C9 /* AgentAppTests */,
@@ -136,6 +139,14 @@
 				EBFBF74F2A6C8CB300099DEA /* PalidromeNumberTests.swift */,
 			);
 			path = AgentAppTests;
+			sourceTree = "<group>";
+		};
+		EBF746432A76F108006BA6F3 /* AuthUI */ = {
+			isa = PBXGroup;
+			children = (
+				EBF746442A76FA2A006BA6F3 /* LoginView.swift */,
+			);
+			path = AuthUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +252,7 @@
 				EB8DE78A2A53181C009FB842 /* ContentView.swift in Sources */,
 				EB9F3A872A68861D00125F2E /* PalindromeNumber.swift in Sources */,
 				EB9F3A892A6886CB00125F2E /* ValidParentheses .swift in Sources */,
+				EBF746452A76FA2A006BA6F3 /* LoginView.swift in Sources */,
 				EB8DE7882A53181C009FB842 /* AgentAppApp.swift in Sources */,
 				EBD42B962A5D7020000E57C9 /* Calculator.swift in Sources */,
 				EBFBF7542A6C8EC200099DEA /* QueueUsingStacks.swift in Sources */,

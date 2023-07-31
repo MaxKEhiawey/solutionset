@@ -11,12 +11,12 @@ struct LoginView: View {
 
     @State private var email = ""
     @State private var password = ""
-    @State private var confirmPassword = ""
     @State private var isEight = false
     @State private var hasCapital = false
     @State private var hasSmallLetter = false
     @State private var hasNumber = false
     @State private var hasSpecialCharacter = false
+    @State private var isSecureField = true
 
     var body: some View {
         VStack {
@@ -27,17 +27,40 @@ struct LoginView: View {
             TextField("Email", text: $email)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
-
-            SecureField("Password", text: $password)
-                .onChange(of: password) { newText in
-                    checkPasswordRequirements(newText)
+            VStack {
+                VStack {
+                    if isSecureField {
+                        SecureField("Password", text: $password)
+                            .onChange(of: password) { newText in
+                                checkPasswordRequirements(newText)
+                            }
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .padding()
+                    } else {
+                        TextField("Password", text: $password)
+                            .onChange(of: password) { newText in
+                                checkPasswordRequirements(newText)
+                            }
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .padding()
+                    }
                 }
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
+                .overlay(
+                    HStack {
+                        Spacer()
+                        Button(action: {
+                                // Toggle the secure field visibility
+                            isSecureField.toggle()
+                        }) {
+                            Image(systemName: isSecureField ? "eye.slash" : "eye")
+                                .foregroundColor(.secondary)
+                        }
+                        .padding(.trailing, 24)
 
-            SecureField("Confirm Password", text: $confirmPassword)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
+                    }
+                )
+
+            }
 
             VStack(alignment: .leading) {
 
@@ -102,3 +125,4 @@ struct LoginView_Previews: PreviewProvider {
         LoginView()
     }
 }
+

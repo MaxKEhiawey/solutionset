@@ -20,13 +20,11 @@ struct LoginView: View {
 
     var body: some View {
         VStack {
-            Image("logo") // Replace "logo" with the name of your logo image asset
-                .resizable()
-                .frame(width: 100, height: 100)
 
             TextField("Email", text: $email)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
+
             VStack {
                 VStack {
                     if isSecureField {
@@ -102,27 +100,16 @@ struct LoginView: View {
 
         let uppercaseCount = input.filter { uppercaseLetters.contains(UnicodeScalar(String($0))!) }.count
         hasCapital = uppercaseCount > 0
-
             // Check for lowercase letters
         let lowercaseCount = input.filter { lowercaseLetters.contains(UnicodeScalar(String($0))!) }.count
         hasSmallLetter = lowercaseCount > 0
-
             // Check for numbers
         let numbersCount = input.filter { numbers.contains(UnicodeScalar(String($0))!) }.count
         hasNumber = numbersCount > 0
-
             // Check for special characters
         let specialCharCount = input.filter { specialCharacters.contains(UnicodeScalar(String($0))!) }.count
         hasSpecialCharacter = specialCharCount > 0
-
+        // minimum eight characters
         isEight = input.count >= 8
-
     }
 }
-
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
-    }
-}
-

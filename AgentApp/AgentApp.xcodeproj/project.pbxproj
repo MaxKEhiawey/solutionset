@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB7C85D02A7B022300671C39 /* AddBinary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7C85CF2A7B022300671C39 /* AddBinary.swift */; };
 		EB8DE7882A53181C009FB842 /* AgentAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8DE7872A53181C009FB842 /* AgentAppApp.swift */; };
 		EB8DE78A2A53181C009FB842 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8DE7892A53181C009FB842 /* ContentView.swift */; };
 		EB8DE78C2A53181D009FB842 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB8DE78B2A53181D009FB842 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB7C85CF2A7B022300671C39 /* AddBinary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBinary.swift; sourceTree = "<group>"; };
 		EB8DE7842A53181C009FB842 /* AgentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB8DE7872A53181C009FB842 /* AgentAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentAppApp.swift; sourceTree = "<group>"; };
 		EB8DE7892A53181C009FB842 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				EB9F3A8C2A69D83500125F2E /* ContainsDuplicate .swift */,
 				EB9F3A8E2A69D8EC00125F2E /* ShuffleTheArray.swift */,
 				EBFBF7532A6C8EC200099DEA /* QueueUsingStacks.swift */,
+				EB7C85CF2A7B022300671C39 /* AddBinary.swift */,
 			);
 			path = Algorithms;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB7C85D02A7B022300671C39 /* AddBinary.swift in Sources */,
 				EBF746722A785892006BA6F3 /* ManageXMLData.swift in Sources */,
 				EB8DE78A2A53181C009FB842 /* ContentView.swift in Sources */,
 				EB9F3A872A68861D00125F2E /* PalindromeNumber.swift in Sources */,

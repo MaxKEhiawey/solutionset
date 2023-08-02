@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB7C85D02A7B022300671C39 /* AddBinary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7C85CF2A7B022300671C39 /* AddBinary.swift */; };
+		EB7C85D22A7B037100671C39 /* AddBinaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7C85D12A7B037100671C39 /* AddBinaryTests.swift */; };
 		EB8DE7882A53181C009FB842 /* AgentAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8DE7872A53181C009FB842 /* AgentAppApp.swift */; };
 		EB8DE78A2A53181C009FB842 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8DE7892A53181C009FB842 /* ContentView.swift */; };
 		EB8DE78C2A53181D009FB842 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB8DE78B2A53181D009FB842 /* Assets.xcassets */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB7C85CF2A7B022300671C39 /* AddBinary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBinary.swift; sourceTree = "<group>"; };
+		EB7C85D12A7B037100671C39 /* AddBinaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBinaryTests.swift; sourceTree = "<group>"; };
 		EB8DE7842A53181C009FB842 /* AgentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB8DE7872A53181C009FB842 /* AgentAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentAppApp.swift; sourceTree = "<group>"; };
 		EB8DE7892A53181C009FB842 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 				EB9F3A8C2A69D83500125F2E /* ContainsDuplicate .swift */,
 				EB9F3A8E2A69D8EC00125F2E /* ShuffleTheArray.swift */,
 				EBFBF7532A6C8EC200099DEA /* QueueUsingStacks.swift */,
+				EB7C85CF2A7B022300671C39 /* AddBinary.swift */,
 			);
 			path = Algorithms;
 			sourceTree = "<group>";
@@ -140,6 +145,7 @@
 				EBFBF74B2A6B343100099DEA /* ContainsDuplicateTests.swift */,
 				EBFBF74D2A6B361400099DEA /* ValidParenthesesTests.swift */,
 				EBFBF74F2A6C8CB300099DEA /* PalidromeNumberTests.swift */,
+				EB7C85D12A7B037100671C39 /* AddBinaryTests.swift */,
 			);
 			path = AgentAppTests;
 			sourceTree = "<group>";
@@ -260,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB7C85D02A7B022300671C39 /* AddBinary.swift in Sources */,
 				EBF746722A785892006BA6F3 /* ManageXMLData.swift in Sources */,
 				EB8DE78A2A53181C009FB842 /* ContentView.swift in Sources */,
 				EB9F3A872A68861D00125F2E /* PalindromeNumber.swift in Sources */,
@@ -282,6 +289,7 @@
 				EBFBF74A2A6B32F000099DEA /* ShuffleArrayTests.swift in Sources */,
 				EBFBF7522A6C8EAF00099DEA /* QueueUsingStacksTests.swift in Sources */,
 				EBFBF7502A6C8CB300099DEA /* PalidromeNumberTests.swift in Sources */,
+				EB7C85D22A7B037100671C39 /* AddBinaryTests.swift in Sources */,
 				EBFBF74E2A6B361400099DEA /* ValidParenthesesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,8 +11,8 @@ class AddBinary {
     
     func addBinary(_ a: String, _ b: String) -> String {
         var result = ""
-        var a = Array(a)
-        var b = Array(b)
+        let a = Array(a)
+        let b = Array(b)
 
         var indexA = a.count - 1
         var indexB = b.count - 1

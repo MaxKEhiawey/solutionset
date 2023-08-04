@@ -19,6 +19,8 @@
 		EB9F3A8F2A69D8EC00125F2E /* ShuffleTheArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9F3A8E2A69D8EC00125F2E /* ShuffleTheArray.swift */; };
 		EBD42B8F2A5D6C46000E57C9 /* AgentAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD42B8E2A5D6C46000E57C9 /* AgentAppTests.swift */; };
 		EBD42B962A5D7020000E57C9 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD42B952A5D7020000E57C9 /* Calculator.swift */; };
+		EBEFA8652A7D9191001D1ECF /* JumpGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEFA8642A7D9191001D1ECF /* JumpGame.swift */; };
+		EBEFA8672A7D9371001D1ECF /* JumpGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEFA8662A7D9371001D1ECF /* JumpGameTests.swift */; };
 		EBF746452A76FA2A006BA6F3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF746442A76FA2A006BA6F3 /* LoginView.swift */; };
 		EBF746722A785892006BA6F3 /* ManageXMLData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF746712A785892006BA6F3 /* ManageXMLData.swift */; };
 		EBFBF74A2A6B32F000099DEA /* ShuffleArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFBF7492A6B32F000099DEA /* ShuffleArrayTests.swift */; };
@@ -54,6 +56,8 @@
 		EBD42B8C2A5D6C46000E57C9 /* AgentAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgentAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBD42B8E2A5D6C46000E57C9 /* AgentAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentAppTests.swift; sourceTree = "<group>"; };
 		EBD42B952A5D7020000E57C9 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		EBEFA8642A7D9191001D1ECF /* JumpGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumpGame.swift; sourceTree = "<group>"; };
+		EBEFA8662A7D9371001D1ECF /* JumpGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumpGameTests.swift; sourceTree = "<group>"; };
 		EBF746442A76FA2A006BA6F3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		EBF746712A785892006BA6F3 /* ManageXMLData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageXMLData.swift; sourceTree = "<group>"; };
 		EBFBF7492A6B32F000099DEA /* ShuffleArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuffleArrayTests.swift; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 				EB9F3A8E2A69D8EC00125F2E /* ShuffleTheArray.swift */,
 				EBFBF7532A6C8EC200099DEA /* QueueUsingStacks.swift */,
 				EB7C85CF2A7B022300671C39 /* AddBinary.swift */,
+				EBEFA8642A7D9191001D1ECF /* JumpGame.swift */,
 			);
 			path = Algorithms;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 				EBFBF74D2A6B361400099DEA /* ValidParenthesesTests.swift */,
 				EBFBF74F2A6C8CB300099DEA /* PalidromeNumberTests.swift */,
 				EB7C85D12A7B037100671C39 /* AddBinaryTests.swift */,
+				EBEFA8662A7D9371001D1ECF /* JumpGameTests.swift */,
 			);
 			path = AgentAppTests;
 			sourceTree = "<group>";
@@ -277,6 +283,7 @@
 				EBFBF7542A6C8EC200099DEA /* QueueUsingStacks.swift in Sources */,
 				EB9F3A8D2A69D83500125F2E /* ContainsDuplicate .swift in Sources */,
 				EB9F3A8F2A69D8EC00125F2E /* ShuffleTheArray.swift in Sources */,
+				EBEFA8652A7D9191001D1ECF /* JumpGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +298,7 @@
 				EBFBF7502A6C8CB300099DEA /* PalidromeNumberTests.swift in Sources */,
 				EB7C85D22A7B037100671C39 /* AddBinaryTests.swift in Sources */,
 				EBFBF74E2A6B361400099DEA /* ValidParenthesesTests.swift in Sources */,
+				EBEFA8672A7D9371001D1ECF /* JumpGameTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

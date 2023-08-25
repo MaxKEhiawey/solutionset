@@ -11,7 +11,8 @@ import SwiftUI
 struct AgentAppApp: App {
     var body: some Scene {
         WindowGroup {
-            RSSListPage()
+            // ContentView2()
+           RSSListPage()
            // LoginView()
            // ContentView()
         }

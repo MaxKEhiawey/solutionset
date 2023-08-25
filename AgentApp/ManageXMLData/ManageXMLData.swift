@@ -141,7 +141,7 @@ struct RSSListPage: View {
 
 struct RSSDetailPage: View {
     let rssItem: RSSItem
-
+    @State var frame: CGFloat = 240
     var body: some View {
         VStack {
             Text(rssItem.title)
@@ -151,9 +151,28 @@ struct RSSDetailPage: View {
                 .font(.subheadline)
                 .foregroundColor(.gray)
                 .padding()
-            Text(rssItem.link)
-                .font(.body)
-                .padding()
+
+            VStack {
+                if let url = URL(string:rssItem.link) {
+                    AsyncImage(url: url) { image in
+                        image
+                            .resizable()
+                            .frame(height: frame) // Adjust the width and height as needed
+                    } placeholder: {
+                        ProgressView(value: 0.10)
+                            .progressViewStyle(CircularProgressViewStyle())
+                            .scaleEffect(1.0) // Adjust the scale factor as needed
+                            .padding()
+                    }
+                } else {
+                    ProgressView(value: 0.10)
+                        .progressViewStyle(CircularProgressViewStyle())
+                        .scaleEffect(1.0) // Adjust the scale factor as needed
+                        .padding()
+                
+                }
+            }
+            .padding(.all, 4)
                 // Add more details if needed
             Spacer()
         }

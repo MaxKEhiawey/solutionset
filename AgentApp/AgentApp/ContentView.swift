@@ -232,3 +232,98 @@ class DataManager {
         }
     }
 }
+
+
+struct ContentView2: View {
+    @State private var text: String = ""
+
+    var body: some View {
+        VStack {
+            TextEditor(text: $text)
+                .frame(height: 200)
+                .border(Color.gray, width: 1)
+                .padding()
+                .keyboardType(.asciiCapable)
+        }
+        .modifier(DismissingKeyboard())
+    }
+}
+
+
+struct DismissingKeyboard: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .onTapGesture {
+                let keyWindow = UIApplication.shared.connectedScenes
+                    .filter({$0.activationState == .foregroundActive})
+                    .map({$0 as? UIWindowScene})
+                    .compactMap({$0})
+                    .first?.windows
+                    .filter({$0.isKeyWindow}).first
+                keyWindow?.endEditing(true)
+            }
+    }
+}
+
+import SwiftUI
+import UIKit
+
+struct UITextFieldWrapper: UIViewControllerRepresentable {
+    @Binding var text: String
+    var onCommit: (() -> Void)?
+
+    func makeUIViewController(context: Context) -> UITextFieldViewController {
+        let textFieldViewController = UITextFieldViewController()
+        textFieldViewController.textField.text = text
+        textFieldViewController.textField.delegate = context.coordinator
+        return textFieldViewController
+    }
+
+    func updateUIViewController(_ uiViewController: UITextFieldViewController, context: Context) {
+        uiViewController.textField.text = text
+    }
+
+    func makeCoordinator() -> Coordinator {
+        Coordinator(text: $text, onCommit: onCommit)
+    }
+
+    class Coordinator: NSObject, UITextFieldDelegate {
+        @Binding var text: String
+        var onCommit: (() -> Void)?
+
+        init(text: Binding<String>, onCommit: (() -> Void)?) {
+            _text = text
+            self.onCommit = onCommit
+        }
+
+        func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+            if let currentText = textField.text {
+                let newText = (currentText as NSString).replacingCharacters(in: range, with: string)
+                text = newText
+            }
+            return true
+        }
+
+        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            textField.resignFirstResponder()
+            onCommit?()
+            return true
+        }
+    }
+}
+
+class UITextFieldViewController: UIViewController {
+    let textField = UITextField()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.addSubview(textField)
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        textField.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        textField.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        textField.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+
+        textField.borderStyle = .roundedRect
+    }
+}

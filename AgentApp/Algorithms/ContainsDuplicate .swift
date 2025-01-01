@@ -21,3 +21,18 @@ class ContainsDuplicate {
         return false
     }
 }
+
+
+class Solution {
+    func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+        var numAndIndex: [Int: Int] = [:]
+    for (index, number) in nums.enumerated() {
+        let compNum = target - number
+        if let compNumIndex = numAndIndex[compNum] {
+            return [index, compNumIndex]
+        }
+        numAndIndex[number] = index
+    }
+    return []
+    }
+}

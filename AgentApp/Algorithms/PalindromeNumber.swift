@@ -23,3 +23,27 @@ class  PalindromeNumber {
         return x == reverse
     }
 }
+
+class  PalindromeNumber2 {
+    
+func isPalindrome(_ x: Int) -> Bool {
+    // Negative numbers and numbers ending with 0 (except 0 itself) are not palindromes
+    if x < 0 || (x % 10 == 0 && x != 0) {
+        return false
+    }
+    
+    var original = x
+    var reversed = 0
+    
+    // Reverse half of the number
+    while original > reversed {
+        let digit = original % 10
+        reversed = reversed * 10 + digit
+        original /= 10
+    }
+    
+    // Check if the original is equal to the reversed part
+    // For odd-length numbers, ignore the middle digit
+    return original == reversed || original == reversed / 10
+}
+}

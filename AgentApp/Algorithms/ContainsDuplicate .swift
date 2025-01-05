@@ -72,3 +72,17 @@ class Solution {
         return value
     }
 }
+
+func singleNumberWithTriplicates(_ nums: [Int]) -> Int {
+    var ones = 0
+    var twos = 0
+    
+    for num in nums {
+        // Update 'ones' to track bits appearing once
+        ones = (ones ^ num) & ~twos
+        // Update 'twos' to track bits appearing twice
+        twos = (twos ^ num) & ~ones
+    }
+    
+    return ones
+}

@@ -62,3 +62,13 @@ class Solution {
     }
     return prev1
     }
+
+class Solution {
+    func singleNumber(_ nums: [Int]) -> Int {
+        var value = 0
+        for num in nums {
+        value ^= num
+        }
+        return value
+    }
+}

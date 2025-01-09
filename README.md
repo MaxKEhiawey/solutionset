@@ -1,4 +1,4 @@
-### Solution set
+## Solution set
 
-## These are common algorithm problems and solutions in swift
+### These are common algorithm problems and solutions in swift
  
